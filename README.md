@@ -160,15 +160,15 @@ uv pip install huggingface-hub torch transformers fastapi typing-extensions typi
 
 #### License Agreement
 
--Meta requires users to accept licensing terms before downloading or deploying the model.
+- Meta requires users to accept licensing terms before downloading or deploying the model.
 
 #### Repository Unlocking
 
--Llama models are gated on Hugging Face and require approval before download.
+- Llama models are gated on Hugging Face and require approval before download.
 
 #### Token Authorization
 
--Approval enables Hugging Face access tokens to authenticate model downloads and usage.
+- Approval enables Hugging Face access tokens to authenticate model downloads and usage.
 
 ### Request Access
 
