@@ -192,7 +192,7 @@ uv pip install huggingface-hub torch transformers fastapi typing-extensions typi
 export HF_TOKEN=<YOUR_HF_TOKEN>
 ```
 
-### Option B — In Code
+### Option B — In Code (e.g. in VSCode)
 
 ```python
 import os
@@ -250,11 +250,17 @@ ngrok http 8005
 
 ## 9. Set Up n8n
 
-Create a free hosted instance:
+1. Create a free hosted instance:
 
-https://app.n8n.cloud
+      https://app.n8n.cloud
 
-No local installation is required.
+      No local installation is required.
+
+2. Import the n8n workflow from ```Fine Tuning n8n - using local LLM.json``` file
+
+3. Set the credential that points to the local model for Classifier LLM & Insight LLM nodes. Use the ngrok exposed url.
+
+4. Test the n8n setup by posting "hello" message.
 
 ---
 
