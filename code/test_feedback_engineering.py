@@ -18,7 +18,7 @@ from deepeval import evaluate
 from deepeval.metrics import AnswerRelevancyMetric, GEval
 from deepeval.test_case import LLMTestCase, LLMTestCaseParams
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "YOUR_OPENAI_API_KEY_HERE"
 if not os.environ.get('OPENAI_API_KEY'):
     print("ERROR: Set OPENAI_API_KEY environment variable first."); sys.exit(1)
 

@@ -7,7 +7,7 @@ from trl import SFTTrainer, SFTConfig
 from datasets import load_dataset
 import time
 
-os.environ["HF_TOKEN"] = "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"
+os.environ["HF_TOKEN"] = "YOUR_HF_TOKEN_HERE"
 login(token=os.environ["HF_TOKEN"])
 
 # Model ids and paths

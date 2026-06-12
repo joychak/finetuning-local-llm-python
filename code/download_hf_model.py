@@ -3,7 +3,7 @@ from huggingface_hub import login
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
-os.environ["HF_TOKEN"] = "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"
+os.environ["HF_TOKEN"] = "YOUR_HF_TOKEN_HERE"
 login(token=os.environ["HF_TOKEN"])
 
 base_model_id = "meta-llama/Llama-3.1-8B-Instruct"

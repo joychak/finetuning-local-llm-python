@@ -4,7 +4,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel
 
-os.environ["HF_TOKEN"] = "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"
+os.environ["HF_TOKEN"] = "YOUR_HF_TOKEN_HERE"
 login(token=os.environ["HF_TOKEN"])
 
 # Model ids and paths
