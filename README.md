@@ -149,7 +149,7 @@ source .venv/bin/activate
 ## 3. Install Dependencies
 
 ```bash
-uv pip install huggingface-hub torch transformers fastapi typing-extensions typing-inspection peft trl datasets deepeval openai python-dotenv
+uv pip install huggingface-hub torch transformers fastapi typing-extensions typing-inspection peft trl datasets deepeval openai python-dotenv bitsandbytes
 ```
 
 ---
