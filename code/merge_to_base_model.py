@@ -10,13 +10,13 @@ login(token=os.environ["HF_TOKEN"])
 # Model ids and paths
 base_model_id = "meta-llama/Llama-3.1-8B-Instruct"
 
-fine_tuned_classifier_model_id = "joychak1/Llama-3.1-8B-Instruct-FineTuned-Classifier-v2"
-fine_tuned_classifier_adapter_path = "./Llama-3.1-8B-Instruct-FineTuned-Classifier-v2-adapters"
-fine_tuned_classifier_model_path = "./Llama-3.1-8B-Instruct-FineTuned-Classifier-v2"
+fine_tuned_classifier_model_id = "joychak1/Llama-3.1-8B-Instruct-FineTuned-Classifier-v1"
+fine_tuned_classifier_adapter_path = "./Llama-3.1-8B-Instruct-FineTuned-Classifier-v1-adapters"
+fine_tuned_classifier_model_path = "./Llama-3.1-8B-Instruct-FineTuned-Classifier-v1"
 
-fine_tuned_insightwriter_model_id = "joychak1/Llama-3.1-8B-Instruct-FineTuned-InsightWriter-v2"
-fine_tuned_insightwriter_adapter_path = "./Llama-3.1-8B-Instruct-FineTuned-InsightWriter-v2-adapters"
-fine_tuned_insightwriter_model_path = "./Llama-3.1-8B-Instruct-FineTuned-InsightWriter-v2"
+fine_tuned_insightwriter_model_id = "joychak1/Llama-3.1-8B-Instruct-FineTuned-InsightWriter-v1"
+fine_tuned_insightwriter_adapter_path = "./Llama-3.1-8B-Instruct-FineTuned-InsightWriter-v1-adapters"
+fine_tuned_insightwriter_model_path = "./Llama-3.1-8B-Instruct-FineTuned-InsightWriter-v1"
 
 # This function merges the fine-tuned LoRA adapters back into the base model, saves the merged model locally, and pushes it to Hugging Face Hub.
 def merge_to_base_model(fine_tuned_adapter_path, fine_tuned_model_path, fine_tuned_model_id):
