@@ -18,7 +18,7 @@ from deepeval import evaluate
 from deepeval.metrics import AnswerRelevancyMetric, GEval
 from deepeval.test_case import LLMTestCase, LLMTestCaseParams
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "YOUR_OPENAI_API_KEY_HERE"  # Set your OpenAI API key as an environment variable
 if not os.environ.get('OPENAI_API_KEY'):
     print("ERROR: Set OPENAI_API_KEY environment variable first."); sys.exit(1)
 
