@@ -135,7 +135,7 @@ cd <project_directory>
 Initialize the project:
 
 ```bash
-uv init
+uv venv
 ```
 
 Activate the virtual environment:
@@ -149,12 +149,12 @@ source .venv/bin/activate
 ## 3. Install Dependencies
 
 ```bash
-uv pip install huggingface-hub torch transformers fastapi typing-extensions typing-inspection peft trl datasets deepeval
+uv pip install huggingface-hub torch transformers fastapi typing-extensions typing-inspection peft trl datasets deepeval openai python-dotenv
 ```
 
 ---
 
-## 4. Request Access to the Llama Model
+## 4. Request Access to the Llama Model at HuggingFace
 
 ### Why Access Is Required
 
@@ -174,7 +174,7 @@ uv pip install huggingface-hub torch transformers fastapi typing-extensions typi
 
 1. Visit the model page:
 
-   https://huggingface.co/meta-llama/Meta-Llama-3-8B
+   https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct
 
 2. Review the license agreement.
 3. Complete the required form.
@@ -182,13 +182,14 @@ uv pip install huggingface-hub torch transformers fastapi typing-extensions typi
 
 ---
 
-## 5. Configure the Hugging Face Token
+## 5. Configure the HuggingFace and OpenAI API Key Token
 
 ### Option A — Environment Variable
 
 #### macOS / Linux
 
 ```bash
+export OPENAI_API_KEY=<YOUR_OPENAI_TOKEN>
 export HF_TOKEN=<YOUR_HF_TOKEN>
 ```
 
@@ -197,6 +198,7 @@ export HF_TOKEN=<YOUR_HF_TOKEN>
 ```python
 import os
 
+os.environ["OPENAI_API_KEY"] = "<YOUR_OPENAI_TOKEN>"
 os.environ["HF_TOKEN"] = "<YOUR_HF_TOKEN>"
 ```
 
@@ -243,7 +245,7 @@ ngrok config add-authtoken $YOUR_AUTHTOKEN
 Expose the API:
 
 ```bash
-ngrok http 8005
+ngrok http --host-header=rewrite http://127.0.0.1:8005
 ```
 
 ---
@@ -258,7 +260,11 @@ ngrok http 8005
 
 2. Import the n8n workflow from ```Fine Tuning n8n - using local LLM.json``` file
 
-3. Set the credential that points to the local model for Classifier LLM & Insight LLM nodes. Use the ngrok exposed url.
+3. Set the credential that points to the local model for ```Classifier LLM``` & ```Insight LLM``` nodes. Use the ngrok exposed url. E.g.,
+
+    ```text
+    https://spinner-tighten-jeep.ngrok-free.dev
+    ```
 
 4. Test the n8n setup by posting "hello" message.
 
@@ -333,7 +339,7 @@ python load_run_local_finetune_model.py
 ### Expose Endpoints
 
 ```bash
-ngrok http 8006
+ngrok http --host-header=rewrite http://127.0.0.1:8006
 ```
 
 ---
@@ -342,10 +348,10 @@ ngrok http 8006
 
 ### Feedback Classifier Endpoint
 
-Update the Classifier LLM credential to:
+Update the Classifier LLM credential to: E.g.,
 
 ```text
-https://spinner-tighten-jeep.ngrok-free.dev/v1
+https://spinner-tighten-jeep.ngrok-free.dev/v2
 ```
 
 ### Engineering Insight Endpoint
@@ -353,7 +359,7 @@ https://spinner-tighten-jeep.ngrok-free.dev/v1
 Update the Insight LLM credential to:
 
 ```text
-https://spinner-tighten-jeep.ngrok-free.dev/v2
+https://spinner-tighten-jeep.ngrok-free.dev/v3
 ```
 
 ---
