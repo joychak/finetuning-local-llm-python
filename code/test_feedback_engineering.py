@@ -2,12 +2,6 @@
 DeepEval Test Suite for Feedback-to-Engineering-Insights Pipeline
 ==================================================================
 Run with: python test_feedback_engineering.py
-
-Prerequisites:
-  pip install deepeval openai
-  Set OPENAI_API_KEY as environment variable (do NOT hardcode)
-    Windows PowerShell:  $env:OPENAI_API_KEY = "sk-proj-..."
-    Mac/Linux:           export OPENAI_API_KEY="sk-proj-..."
 """
 import sys, os
 if sys.platform == "win32":
