@@ -11,8 +11,8 @@ os.environ["HF_TOKEN"] = "YOUR_HF_TOKEN_HERE"
 login(token=os.environ["HF_TOKEN"])
 
 # Model ids and paths
-training_classifier_data_path = "/Users/joychak/joy/code/repository/IK/personalization_fine_tuning_of_agents_module/Live_Class_Slides_and_Project/hf_project_demo/code/training_data_classifier.jsonl"
-training_insightwriter_data_path = "/Users/joychak/joy/code/repository/IK/personalization_fine_tuning_of_agents_module/Live_Class_Slides_and_Project/hf_project_demo/code/training_data_insight.jsonl"
+training_classifier_data_path = "./training_data_classifier.jsonl"
+training_insightwriter_data_path = "./training_data_insight.jsonl"
 base_model_id = "meta-llama/Llama-3.1-8B-Instruct"
 fine_tuned_classifier_adapter_path = "./Llama-3.1-8B-Instruct-FineTuned-Classifier-v1-adapters"
 fine_tuned_InsightWriter_adapter_path = "./Llama-3.1-8B-Instruct-FineTuned-InsightWriter-v1-adapters"
