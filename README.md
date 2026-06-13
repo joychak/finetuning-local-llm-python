@@ -313,6 +313,8 @@ Fine-tuning uses:
 python fine_tune_training.py
 ```
 
+> Estimated training time: ~2 hours for each model
+
 ### Step 2 — Merge Adapters into the Base Model
 
 ```bash
